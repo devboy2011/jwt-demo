@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "startServer" : "nodemon server"
+    "startServer" : "nodemon server",
+    "startAuthServer" : "nodemon authServer"
   },
   "keywords": [],
   "author": "",

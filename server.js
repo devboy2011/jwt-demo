@@ -42,21 +42,6 @@ function authenToken (req, res, next) {
     });
 }
 
-app.post('/login',  (req, res) => {
-    /*
-        Authentication
-    */
-    
-    // Authorization
-    const data = req.body;
-    
-    const accessToken = Jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, { 
-        expiresIn : '10s'
-    });
-    
-    res.json({accessToken});
-})
-
 app.listen(PORT, () => {
     console.log(`Server is running on PORT ${PORT}`);
 })
