@@ -1,10 +1,25 @@
 GET http://localhost:5000/books
-Authorization: Beaer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lIiwiaWF0IjoxNjk0MTQ3NDk2LCJleHAiOjE2OTQxNDc1MDZ9.caj_21mn-1JfQOhwBdFJxtA3ZW0RDg_QpmUy8h55iII
+Authorization: Beaer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lIiwiaWF0IjoxNjk0MTYxNjA1LCJleHAiOjE2OTQxNjE2MzV9.GE7WbM9nUUendp-AWDXEdGOpOUYIdoWDOokgy44Vfx8
 ###
 
-POST http://localhost:5000/login
+POST http://localhost:5500/login
 Content-Type: application/json
 
 {
     "username" : "me"
+}
+###
+POST http://localhost:5500/refreshtoken
+Content-Type: application/json
+
+{
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lIiwiaWF0IjoxNjk0MTYxNTU3fQ.LA-rTE-0sq5BUP_IcdNn5AdgyQAobFs51tC5l0c0lVw"
+}
+###
+
+POST http://localhost:5500/logout
+Content-Type: application/json
+
+{
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lIiwiaWF0IjoxNjk0MTYxNTU3fQ.LA-rTE-0sq5BUP_IcdNn5AdgyQAobFs51tC5l0c0lVw"
 }

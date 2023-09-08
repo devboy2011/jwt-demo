@@ -31,7 +31,7 @@ function authenToken (req, res, next) {
     const authorizationHeader = req.headers['authorization'];
     
     const token = authorizationHeader.split(' ')[1];
-    
+    // Unauthorized code
     if (!token) res.sendStatus(401);
     
     Jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (error, data) => {
